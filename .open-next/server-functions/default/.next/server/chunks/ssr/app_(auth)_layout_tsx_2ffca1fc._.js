@@ -1,3 +1,0 @@
-module.exports=[12498,a=>{"use strict";var b=a.i(7997);function c({children:a}){return(0,b.jsxs)("div",{className:"flex min-h-screen items-center justify-center bg-black bg-[url(/grid.svg)] bg-center p-4",children:[(0,b.jsx)("div",{className:"absolute inset-0 bg-black/80 backdrop-blur-sm"}),(0,b.jsx)("div",{className:"relative w-full max-w-md",children:a})]})}a.s(["default",()=>c])}];
-
-//# sourceMappingURL=app_%28auth%29_layout_tsx_2ffca1fc._.js.map
