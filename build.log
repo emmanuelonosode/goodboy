@@ -1,0 +1,33 @@
+
+> my-app@0.1.0 build
+> next build
+
+ ⚠ `eslint` configuration in next.config.ts is no longer supported. See more info here: https://nextjs.org/docs/app/api-reference/cli/next#next-lint-options
+ ⚠ Invalid next.config.ts options detected: 
+ ⚠     Unrecognized key(s) in object: 'eslint'
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\emmanuel onosode\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\emmanuel onosode\Desktop\HYIP\my-app\package-lock.json
+   * C:\Users\emmanuel onosode\Desktop\HYIP\package-lock.json
+
+   ▲ Next.js 16.0.6 (Turbopack)
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 18.0s
+   Skipping validation of types
+   Collecting page data using 7 workers ...
+   Generating static pages using 7 workers (0/23) ...
+Error occurred prerendering page "/about/compliance". Read more: https://nextjs.org/docs/messages/prerender-error
+Error: Attempted to call createMotionComponent() from the server but createMotionComponent is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+    at <unknown> (C:\Users\emmanuel onosode\Desktop\HYIP\my-app\.next\server\chunks\ssr\Desktop_HYIP_my-app_6addf615._.js:1:607)
+    at Object.get (C:\Users\emmanuel onosode\Desktop\HYIP\my-app\.next\server\chunks\ssr\Desktop_HYIP_my-app_6addf615._.js:1:123327)
+    at fW (C:\Users\emmanuel onosode\Desktop\HYIP\my-app\.next\server\chunks\ssr\Desktop_HYIP_my-app_6addf615._.js:1:132559)
+    at stringify (<anonymous>) {
+  digest: '114473808'
+}
+Export encountered an error on /(public)/about/compliance/page: /about/compliance, exiting the build.
+ ⨯ Next.js build worker exited with code: 1 and signal: null

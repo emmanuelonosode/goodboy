@@ -1,26 +1,110 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  
+  /* Custom Colors */
+  --color-rich-black: #0a0a0f;
+  --color-midnight-blue: #1a1b26;
+  --color-metallic-gold: #D4AF37;
+  --color-emerald-accent: #10B981;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* Deep Obsidian Theme (Dark Mode by Default) */
+  --background: #0a0a0f; /* Rich Black */
+  --foreground: #cbd5e1; /* Slate-300 */
+  
+  --card: #1a1b26; /* Midnight Blue */
+  --card-foreground: #ffffff;
+  
+  --popover: #1a1b26;
+  --popover-foreground: #ffffff;
+  
+  --primary: #D4AF37; /* Metallic Gold */
+  --primary-foreground: #0a0a0f;
+  
+  --secondary: #1a1b26;
+  --secondary-foreground: #ffffff;
+  
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  
+  --accent: #D4AF37;
+  --accent-foreground: #0a0a0f;
+  
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #D4AF37;
+  
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Same as root since we are dark-first */
+  --background: #0a0a0f;
+  --foreground: #cbd5e1;
+  --card: #1a1b26;
+  --card-foreground: #ffffff;
+  --popover: #1a1b26;
+  --popover-foreground: #ffffff;
+  --primary: #D4AF37;
+  --primary-foreground: #0a0a0f;
+  --secondary: #1a1b26;
+  --secondary-foreground: #ffffff;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #D4AF37;
+  --accent-foreground: #0a0a0f;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #D4AF37;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .glass {
+    @apply bg-midnight-blue/60 backdrop-blur-md border border-white/10;
+  }
+  .glass-card {
+    @apply bg-midnight-blue/40 backdrop-blur-md border border-white/5 shadow-xl;
+  }
 }
