@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Search } from "lucide-react";
+import { Search, TrendingUp } from "lucide-react";
 import { mockMarketData } from "@/lib/mock-data";
 import Link from "next/link";
+import { TradingChartMini } from "@/components/ui/TradingChartMini";
+import { BitcoinPulse } from "@/components/ui/BitcoinPulse";
 
 export default function MarketsPage() {
   const [search, setSearch] = useState("");
@@ -15,13 +17,20 @@ export default function MarketsPage() {
   );
 
   return (
-    <div className="container mx-auto px-4 py-20">
-      <div className="mb-12 text-center">
-        <h1 className="mb-4 text-4xl font-bold text-white">Live Markets</h1>
-        <p className="text-gray-400">Track real-time prices and market trends.</p>
+    <div className="container mx-auto px-4 pt-40 pb-20">
+      <div className="mb-12 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="text-center md:text-left">
+          <h1 className="mb-4 text-4xl font-bold text-white">Live Markets</h1>
+          <p className="text-gray-400 max-w-lg">
+            Track real-time prices, analyze market trends, and execute trades with institutional-grade precision.
+          </p>
+        </div>
+        <div className="hidden md:block scale-75">
+          <BitcoinPulse />
+        </div>
       </div>
 
-      <div className="mx-auto mb-8 max-w-md">
+      <div className="mx-auto mb-8 max-w-md md:mx-0">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
           <input
@@ -42,6 +51,7 @@ export default function MarketsPage() {
                 <th className="p-4 font-medium">Asset</th>
                 <th className="p-4 font-medium">Price</th>
                 <th className="p-4 font-medium">24h Change</th>
+                <th className="p-4 font-medium">Trend</th>
                 <th className="p-4 font-medium">Volume</th>
                 <th className="p-4 text-right font-medium">Action</th>
               </tr>
@@ -77,6 +87,9 @@ export default function MarketsPage() {
                       {asset.change >= 0 ? "+" : ""}
                       {asset.change}%
                     </span>
+                  </td>
+                  <td className="p-4 w-32">
+                    <TradingChartMini color={asset.change >= 0 ? "#10B981" : "#EF4444"} />
                   </td>
                   <td className="p-4 text-gray-300">{asset.volume}</td>
                   <td className="p-4 text-right">

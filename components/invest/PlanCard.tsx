@@ -5,6 +5,7 @@ import { Check, Bitcoin } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
+import { TradingChartMini } from "@/components/ui/TradingChartMini";
 
 interface PlanCardProps {
   name: string;
@@ -76,6 +77,11 @@ export function PlanCard({
         <div className={`rounded-full p-3 ${isRecommended ? "bg-metallic-gold text-black" : "bg-white/10 text-white"}`}>
           <Bitcoin className={`h-6 w-6 ${isRecommended ? "animate-pulse" : ""}`} />
         </div>
+      </div>
+
+      {/* Mini Chart Visualization */}
+      <div className="mb-6 h-12 w-full opacity-70">
+        <TradingChartMini color={isRecommended ? "#D4AF37" : "#10B981"} />
       </div>
 
       <div className="mb-6 space-y-2 border-b border-white/10 pb-6">

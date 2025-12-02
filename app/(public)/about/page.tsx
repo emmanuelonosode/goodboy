@@ -1,11 +1,12 @@
 import { TrustIndicators } from "@/components/trust/TrustIndicators";
 import { Shield, Users, Globe, Award } from "lucide-react";
+import { BitcoinPulse } from "@/components/ui/BitcoinPulse";
 
 export default function AboutPage() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
+      <section className="relative overflow-hidden pt-40 pb-20">
         <div className="absolute inset-0 bg-gradient-to-b from-metallic-gold/10 to-transparent opacity-50" />
         <div className="container mx-auto px-4 text-center">
           <h1 className="mb-6 text-5xl font-bold text-white">About EliteCore</h1>
@@ -52,11 +53,10 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="relative h-[400px] overflow-hidden rounded-2xl bg-white/5">
+            <div className="relative h-[400px] overflow-hidden rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-br from-metallic-gold/20 to-transparent" />
-              {/* Placeholder for Office Image */}
-              <div className="flex h-full items-center justify-center text-gray-600">
-                Office Image Placeholder
+              <div className="relative z-10 scale-150">
+                <BitcoinPulse />
               </div>
             </div>
           </div>

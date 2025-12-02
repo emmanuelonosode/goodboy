@@ -20,7 +20,7 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-[40px] left-0 right-0 z-40 transition-all duration-300 ${
+      className={`w-full z-40 transition-all duration-300 ${
         isScrolled ? "bg-midnight-blue/80 backdrop-blur-md border-b border-white/5 py-4" : "bg-transparent py-6"
       }`}
     >

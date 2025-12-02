@@ -48,7 +48,7 @@ export function CryptoBackground() {
       })}
 
       {/* Grid Overlay */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-[0.03]" />
+      <div className="absolute inset-0 bg-[url(/grid.svg)] bg-center opacity-[0.03]" />
       
       {/* Gradient Orbs */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-metallic-gold/5 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2" />

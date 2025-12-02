@@ -2,26 +2,35 @@ import { AffiliateCalculator } from "@/components/affiliate/AffiliateCalculator"
 import { Button } from "@/components/ui/button";
 import { Users, Share2, Wallet, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { BitcoinPulse } from "@/components/ui/BitcoinPulse";
 
 export default function AffiliatePage() {
   return (
-    <div className="py-20">
+    <div className="pt-40 pb-20">
       {/* Hero */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-metallic-gold/5 to-transparent" />
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Partner with the <br />
-            <span className="text-metallic-gold">Market Leader</span>
-          </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
-            Join the EliteCore Affiliate Program and earn up to 11% commission across three levels. Build your wealth by empowering others.
-          </p>
-          <Link href="/signup">
-            <Button size="lg" className="bg-metallic-gold text-rich-black hover:bg-yellow-500 font-bold px-8 h-14 text-lg">
-              Become a Partner
-            </Button>
-          </Link>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+            <div className="text-center md:text-left max-w-2xl">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                Partner with the <br />
+                <span className="text-metallic-gold">Market Leader</span>
+              </h1>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto md:mx-0 mb-10">
+                Join the EliteCore Affiliate Program and earn up to 11% commission across three levels. Build your wealth by empowering others.
+              </p>
+              <Link href="/signup">
+                <Button size="lg" className="bg-metallic-gold text-rich-black hover:bg-yellow-500 font-bold px-8 h-14 text-lg">
+                  Become a Partner
+                </Button>
+              </Link>
+            </div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-metallic-gold/20 blur-[80px] rounded-full" />
+              <BitcoinPulse />
+            </div>
+          </div>
         </div>
       </section>
 
