@@ -1,0 +1,3 @@
+module.exports=[87924,(a,b,c)=>{"use strict";b.exports=a.r(42602).vendored["react-ssr"].ReactJsxRuntime},36642,a=>{"use strict";var b=a.i(87924),c=a.i(46271);function d({children:a}){return(0,b.jsx)(c.motion.div,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},exit:{opacity:0,y:20},transition:{ease:"easeInOut",duration:.4},children:a})}a.s(["default",()=>d])}];
+
+//# sourceMappingURL=_84b3604d._.js.map
