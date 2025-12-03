@@ -52,7 +52,7 @@ export function Testimonials() {
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">"{t.content}"</p>
               <div className="flex items-center gap-4">
-                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 border border-white/10" />
+                <div className="h-12 w-12 rounded-full bg-gray-800 border border-white/10" />
                 <div>
                   <div className="font-bold text-white">{t.name}</div>
                   <div className="text-xs text-metallic-gold">{t.role}</div>

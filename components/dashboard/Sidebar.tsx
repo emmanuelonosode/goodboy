@@ -41,7 +41,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       <div className="flex h-full flex-col">
         <div className="flex h-16 items-center border-b border-white/10 px-6">
           <Link href="/" className="flex items-center gap-2 font-bold text-xl text-white">
-            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-metallic-gold to-yellow-600" />
+            <div className="h-8 w-8 rounded-lg bg-metallic-gold" />
             EliteCore
           </Link>
         </div>

@@ -36,7 +36,7 @@ export function HowItWorks() {
 
         <div className="grid md:grid-cols-3 gap-12 relative">
           {/* Connecting Line (Desktop) */}
-          <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-gradient-to-r from-transparent via-metallic-gold/30 to-transparent" />
+          <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-metallic-gold/30" />
 
           {STEPS.map((step, i) => (
             <motion.div

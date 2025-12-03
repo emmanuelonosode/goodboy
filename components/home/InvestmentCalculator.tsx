@@ -25,7 +25,7 @@ export function InvestmentCalculator() {
   return (
     <section className="py-20 bg-midnight-blue relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-metallic-gold/5 to-transparent pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-metallic-gold/5 pointer-events-none" />
 
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -103,7 +103,7 @@ export function InvestmentCalculator() {
                   </div>
                 </div>
 
-                <div className="p-6 rounded-xl bg-gradient-to-br from-metallic-gold/20 to-yellow-600/20 border border-metallic-gold/20 text-center">
+                <div className="p-6 rounded-xl bg-metallic-gold/20 border border-metallic-gold/20 text-center">
                   <p className="text-slate-300 text-sm mb-2">Total Return after 30 Days</p>
                   <p className="text-4xl font-bold text-white mb-2">${Number(total).toLocaleString()}</p>
                   <Button className="w-full mt-4 bg-metallic-gold text-rich-black hover:bg-yellow-500 font-bold">

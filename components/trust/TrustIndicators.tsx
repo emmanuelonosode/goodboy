@@ -49,8 +49,7 @@ export function TrustIndicators() {
               Live Withdrawals
             </h3>
             <div className="relative h-[400px] overflow-hidden rounded-2xl bg-midnight-blue/30 border border-white/5 p-6">
-              <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-midnight-blue/30 to-transparent z-10" />
-              <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-midnight-blue/30 to-transparent z-10" />
+              {/* Gradient fades removed as per user request */}
               
               <motion.div
                 animate={{ y: ["0%", "-50%"] }}

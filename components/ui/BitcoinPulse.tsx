@@ -22,12 +22,12 @@ export function BitcoinPulse() {
       ))}
 
       {/* Core Bitcoin Logo */}
-      <div className="relative z-10 w-full h-full rounded-full bg-gradient-to-br from-metallic-gold to-yellow-600 flex items-center justify-center shadow-[0_0_50px_rgba(212,175,55,0.4)]">
+      <div className="relative z-10 w-full h-full rounded-full bg-metallic-gold flex items-center justify-center shadow-[0_0_50px_rgba(217,70,239,0.4)]">
         <div className="absolute inset-1 rounded-full border-2 border-white/20" />
         <span className="text-6xl md:text-8xl font-bold text-white drop-shadow-lg">₿</span>
         
-        {/* Shine Effect */}
-        <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-white/20 to-transparent opacity-50" />
+        {/* Shine Effect - Removed Gradient */}
+        <div className="absolute inset-0 rounded-full bg-white/10 opacity-50" />
       </div>
     </div>
   );

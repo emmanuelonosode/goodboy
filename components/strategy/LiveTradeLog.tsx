@@ -27,7 +27,7 @@ export function LiveTradeLog() {
     <div className="rounded-xl border border-white/10 bg-black/80 backdrop-blur-md font-mono text-sm overflow-hidden relative group">
       {/* Matrix/Code Background Effect */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none overflow-hidden">
-        <div className="flex justify-around text-[10px] leading-3 text-emerald-500/50">
+        <div className="flex justify-around text-[10px] leading-3 text-emerald-accent/50">
           {[...Array(10)].map((_, i) => (
             <motion.div
               key={i}
@@ -53,13 +53,13 @@ export function LiveTradeLog() {
           <Terminal className="h-4 w-4" />
           <span className="font-bold tracking-wider">LIVE_EXECUTION_TERMINAL_V2.0</span>
           <div className="ml-auto flex items-center gap-2">
-            <span className="text-xs text-emerald-500">SYSTEM_ONLINE</span>
-            <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-xs text-emerald-accent">SYSTEM_ONLINE</span>
+            <span className="flex h-2 w-2 rounded-full bg-emerald-accent animate-pulse" />
           </div>
         </div>
         
         <div className="space-y-1 h-[300px] overflow-hidden relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20 pointer-events-none z-20" />
+          <div className="absolute inset-0 bg-black/20 pointer-events-none z-20" />
           <AnimatePresence mode="popLayout">
             {logs.map((log, i) => (
               <motion.div
@@ -76,7 +76,7 @@ export function LiveTradeLog() {
                   <Hash className="w-3 h-3" />
                   {log.exchange}
                 </span>
-                <span className="ml-auto font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                <span className="ml-auto font-bold text-emerald-accent bg-emerald-accent/10 px-2 py-0.5 rounded border border-emerald-accent/20">
                   {log.profit}
                 </span>
               </motion.div>

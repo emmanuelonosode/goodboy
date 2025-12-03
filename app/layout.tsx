@@ -47,7 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} bg-background text-foreground antialiased selection:bg-metallic-gold/30 selection:text-white`}>
+      <body className={`${inter.className} bg-background text-foreground antialiased selection:bg-metallic-gold/30 selection:text-white relative`}>
+        {/* Waves Background Pattern */}
+        <div className="fixed inset-0 opacity-30 pointer-events-none" style={{ backgroundImage: 'url(/waves.svg)', backgroundSize: 'cover', backgroundPosition: 'center bottom', backgroundRepeat: 'no-repeat' }} />
         {children}
         <Toaster position="top-center" richColors />
       </body>

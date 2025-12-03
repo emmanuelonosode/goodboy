@@ -31,7 +31,7 @@ export function Hero() {
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
               Institutional-Grade <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-metallic-gold to-yellow-200">
+              <span className="text-metallic-gold">
                 Trading for Everyone
               </span>
             </h1>
@@ -43,7 +43,7 @@ export function Hero() {
             
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <Link href="/signup">
-                <Button size="lg" className="bg-metallic-gold text-rich-black hover:bg-yellow-500 font-bold px-8 h-14 text-lg shadow-lg shadow-metallic-gold/20 w-full sm:w-auto">
+                <Button size="lg" className="bg-metallic-gold text-rich-black hover:bg-metallic-gold/90 font-bold px-8 h-14 text-lg shadow-lg shadow-metallic-gold/20 w-full sm:w-auto">
                   Start Investing
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
@@ -64,7 +64,7 @@ export function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="relative z-10 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-xl rounded-3xl border border-white/10 p-6 shadow-2xl">
+            <div className="relative z-10 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/10 p-6 shadow-2xl">
               <div className="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-metallic-gold/20 flex items-center justify-center">
@@ -73,7 +73,7 @@ export function Hero() {
                   <div>
                     <div className="text-white font-bold">Market Pulse</div>
                     <div className="text-xs text-emerald-400 flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-accent animate-pulse" />
                       Live Analysis
                     </div>
                   </div>
@@ -107,7 +107,7 @@ export function Hero() {
 
             {/* Floating Elements */}
             <div className="absolute -top-10 -right-10 w-24 h-24 bg-metallic-gold/20 rounded-full blur-2xl animate-pulse" />
-            <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-emerald-500/20 rounded-full blur-2xl animate-pulse delay-700" />
+            <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-emerald-accent/20 rounded-full blur-2xl animate-pulse delay-700" />
           </motion.div>
         </div>
       </div>

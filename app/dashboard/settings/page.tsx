@@ -54,7 +54,7 @@ export default function SettingsPage() {
             <div className="space-y-6">
               <h2 className="text-lg font-semibold text-white">Profile Information</h2>
               <div className="flex items-center gap-4">
-                <div className="h-20 w-20 rounded-full bg-gradient-to-br from-metallic-gold to-yellow-600" />
+                <div className="h-20 w-20 rounded-full bg-metallic-gold" />
                 <div>
                   <button className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white hover:bg-white/10">
                     Change Avatar
@@ -139,7 +139,7 @@ export default function SettingsPage() {
             <button
               onClick={handleSave}
               disabled={loading}
-              className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-metallic-gold to-yellow-600 px-6 py-2.5 font-bold text-black transition-opacity disabled:opacity-50"
+              className="flex items-center gap-2 rounded-lg bg-metallic-gold px-6 py-2.5 font-bold text-black transition-opacity disabled:opacity-50"
             >
               {loading ? "Saving..." : "Save Changes"}
               {!loading && <Save className="h-4 w-4" />}

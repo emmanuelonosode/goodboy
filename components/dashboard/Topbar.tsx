@@ -40,7 +40,7 @@ export function Topbar({ onMenuClick }: TopbarProps) {
               <p className="text-sm font-medium text-white">{mockUser.name}</p>
               <p className="text-xs text-gray-400">Verified User</p>
             </div>
-            <div className="h-10 w-10 rounded-full bg-gradient-to-br from-metallic-gold to-yellow-600" />
+            <div className="h-10 w-10 rounded-full bg-metallic-gold" />
           </div>
         </div>
       </div>

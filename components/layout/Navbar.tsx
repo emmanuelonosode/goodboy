@@ -27,7 +27,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-metallic-gold to-yellow-600 flex items-center justify-center text-rich-black font-bold text-xl shadow-lg shadow-metallic-gold/20 group-hover:scale-105 transition-transform">
+          <div className="w-10 h-10 rounded-xl bg-metallic-gold flex items-center justify-center text-rich-black font-bold text-xl shadow-lg shadow-metallic-gold/20 group-hover:scale-105 transition-transform">
             E
           </div>
           <span className="text-2xl font-bold text-white tracking-tight">
@@ -63,7 +63,7 @@ export function Navbar() {
             </Button>
           </Link>
           <Link href="/signup">
-            <Button className="bg-metallic-gold text-rich-black hover:bg-yellow-500 font-semibold shadow-lg shadow-metallic-gold/20">
+            <Button className="bg-metallic-gold text-rich-black hover:bg-metallic-gold/90 font-semibold shadow-lg shadow-metallic-gold/20">
               Sign Up
             </Button>
           </Link>
@@ -111,7 +111,7 @@ export function Navbar() {
                   </Button>
                 </Link>
                 <Link href="/signup" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button className="w-full bg-metallic-gold text-rich-black hover:bg-yellow-500">
+                  <Button className="w-full bg-metallic-gold text-rich-black hover:bg-metallic-gold/90">
                     Sign Up
                   </Button>
                 </Link>

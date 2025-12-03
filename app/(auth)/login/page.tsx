@@ -25,7 +25,7 @@ export default function LoginPage() {
       <div className="mb-8 text-center">
         <Link href="/" className="mb-6 inline-block">
           <div className="flex items-center justify-center gap-2">
-            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-metallic-gold to-yellow-600" />
+            <div className="h-8 w-8 rounded-lg bg-metallic-gold" />
             <span className="text-xl font-bold text-white">EliteCore</span>
           </div>
         </Link>
@@ -73,7 +73,7 @@ export default function LoginPage() {
         <button
           type="submit"
           disabled={loading}
-          className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-metallic-gold to-yellow-600 py-3 font-bold text-black transition-opacity disabled:opacity-50"
+          className="flex w-full items-center justify-center gap-2 rounded-lg bg-metallic-gold py-3 font-bold text-black transition-opacity disabled:opacity-50"
         >
           {loading ? "Signing in..." : "Sign In"}
           {!loading && <ArrowRight className="h-5 w-5" />}

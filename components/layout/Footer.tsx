@@ -11,7 +11,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-metallic-gold to-yellow-600 flex items-center justify-center text-rich-black font-bold shadow-lg shadow-metallic-gold/20">
+              <div className="w-8 h-8 rounded-lg bg-metallic-gold flex items-center justify-center text-rich-black font-bold shadow-lg shadow-metallic-gold/20">
                 E
               </div>
               <span className="text-xl font-bold text-white">
@@ -84,7 +84,7 @@ export function Footer() {
                 placeholder="Enter your email"
                 className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white placeholder:text-slate-500 focus:outline-none focus:border-metallic-gold w-full"
               />
-              <Button className="bg-metallic-gold text-rich-black hover:bg-yellow-500">
+              <Button className="bg-metallic-gold text-rich-black hover:bg-metallic-gold/90">
                 Join
               </Button>
             </div>

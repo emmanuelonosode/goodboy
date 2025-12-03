@@ -64,7 +64,7 @@ export default function MarketsPage() {
                 >
                   <td className="p-4">
                     <div className="flex items-center gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-metallic-gold/20 to-yellow-600/20 text-sm font-bold text-metallic-gold">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-metallic-gold/20 text-sm font-bold text-metallic-gold">
                         {asset.symbol[0]}
                       </div>
                       <div>

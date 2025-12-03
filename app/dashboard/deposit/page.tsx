@@ -76,7 +76,7 @@ export default function DepositPage() {
             <button
               onClick={() => setStep(2)}
               disabled={!selectedGateway}
-              className="w-full rounded-lg bg-gradient-to-r from-metallic-gold to-yellow-600 py-3 font-bold text-black transition-opacity disabled:opacity-50"
+              className="w-full rounded-lg bg-metallic-gold py-3 font-bold text-black transition-opacity disabled:opacity-50"
             >
               Continue
             </button>
@@ -106,7 +106,7 @@ export default function DepositPage() {
               <button
                 onClick={() => setStep(3)}
                 disabled={!amount}
-                className="w-full rounded-lg bg-gradient-to-r from-metallic-gold to-yellow-600 py-3 font-bold text-black transition-opacity disabled:opacity-50"
+                className="w-full rounded-lg bg-metallic-gold py-3 font-bold text-black transition-opacity disabled:opacity-50"
               >
                 Continue
               </button>
@@ -140,7 +140,7 @@ export default function DepositPage() {
                 setAmount("");
                 setSelectedGateway(null);
               }}
-              className="w-full rounded-lg bg-gradient-to-r from-metallic-gold to-yellow-600 py-3 font-bold text-black"
+              className="w-full rounded-lg bg-metallic-gold py-3 font-bold text-black"
             >
               I have sent the payment
             </button>

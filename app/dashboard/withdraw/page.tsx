@@ -110,7 +110,7 @@ export default function WithdrawPage() {
           <button
             type="submit"
             disabled={loading || Number(amount) > mockUser.balance || !amount || !wallet || !twoFactor}
-            className="w-full rounded-lg bg-gradient-to-r from-metallic-gold to-yellow-600 py-3 font-bold text-black transition-opacity disabled:opacity-50"
+            className="w-full rounded-lg bg-metallic-gold py-3 font-bold text-black transition-opacity disabled:opacity-50"
           >
             {loading ? "Processing..." : "Withdraw Funds"}
           </button>

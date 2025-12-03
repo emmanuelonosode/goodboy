@@ -9,7 +9,7 @@ export default function AffiliatePage() {
     <div className="pt-40 pb-20">
       {/* Hero */}
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-metallic-gold/5 to-transparent" />
+        <div className="absolute inset-0 bg-metallic-gold/5" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-center gap-12">
             <div className="text-center md:text-left max-w-2xl">

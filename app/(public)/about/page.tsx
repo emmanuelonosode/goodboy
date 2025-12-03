@@ -7,7 +7,7 @@ export default function AboutPage() {
     <div className="relative">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-40 pb-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-metallic-gold/10 to-transparent opacity-50" />
+        <div className="absolute inset-0 bg-metallic-gold/10 opacity-50" />
         <div className="container mx-auto px-4 text-center">
           <h1 className="mb-6 text-5xl font-bold text-white">About EliteCore</h1>
           <p className="mx-auto max-w-2xl text-xl text-gray-400">
@@ -54,7 +54,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative h-[400px] overflow-hidden rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-br from-metallic-gold/20 to-transparent" />
+              <div className="absolute inset-0 bg-metallic-gold/20" />
               <div className="relative z-10 scale-150">
                 <BitcoinPulse />
               </div>

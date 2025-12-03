@@ -5,7 +5,7 @@ import { Cpu, Network, Zap, ShieldCheck, Activity, BarChart3 } from "lucide-reac
 
 export default function StrategyPage() {
   return (
-    <div className="py-20">
+    <div className="min-h-screen text-white selection:bg-metallic-gold/30">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-[url(/grid.svg)] bg-center opacity-20" />
@@ -24,11 +24,11 @@ export default function StrategyPage() {
               </p>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <div className="px-6 py-3 rounded-lg bg-white/5 border border-white/10 flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <div className="w-2 h-2 rounded-full bg-emerald-accent animate-pulse" />
                   <span className="text-white font-mono">BTC/USDT</span>
                 </div>
                 <div className="px-6 py-3 rounded-lg bg-white/5 border border-white/10 flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <div className="w-2 h-2 rounded-full bg-emerald-accent animate-pulse" />
                   <span className="text-white font-mono">ETH/USDT</span>
                 </div>
               </div>
@@ -63,8 +63,8 @@ export default function StrategyPage() {
                   <div className="text-sm text-gray-500 relative z-10">Latency</div>
                 </div>
                 <div className="p-4 rounded-lg bg-black/40 border border-white/10 relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-emerald-500/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-                  <ShieldCheck className="h-8 w-8 text-emerald-500 mb-2 relative z-10" />
+                  <div className="absolute inset-0 bg-emerald-accent/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                  <ShieldCheck className="h-8 w-8 text-emerald-accent mb-2 relative z-10" />
                   <div className="text-2xl font-bold text-white relative z-10">99.9%</div>
                   <div className="text-sm text-gray-500 relative z-10">Uptime</div>
                 </div>
@@ -86,11 +86,11 @@ export default function StrategyPage() {
                   </div>
                 ))}
                 <div className="py-2 text-center text-lg font-bold text-white border-y border-white/10 my-2">
-                  64,245.50 <span className="text-emerald-500 text-sm">↑</span>
+                  64,245.50 <span className="text-emerald-accent text-sm">↑</span>
                 </div>
                 {[...Array(5)].map((_, i) => (
-                  <div key={`bid-${i}`} className="flex justify-between text-emerald-400/80 py-0.5 relative">
-                    <div className="absolute inset-0 bg-emerald-500/5 w-[40%]" style={{ width: `${Math.random() * 100}%` }} />
+                  <div key={`bid-${i}`} className="flex justify-between text-emerald-accent/80 py-0.5 relative">
+                    <div className="absolute inset-0 bg-emerald-accent/5 w-[40%]" style={{ width: `${Math.random() * 100}%` }} />
                     <span className="relative z-10">64,{(240 - i * 10).toFixed(2)}</span>
                     <span className="relative z-10">{(Math.random() * 2).toFixed(4)}</span>
                     <span className="relative z-10">{(Math.random() * 50000).toFixed(2)}</span>
