@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, ArrowUpRight, ArrowDownLeft, PieChart, History, Settings, LogOut } from "lucide-react";
+import { LayoutDashboard, ArrowUpRight, ArrowDownLeft, PieChart, History, Settings, LogOut, Brain } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const sidebarItems = [
   { icon: LayoutDashboard, label: "Overview", href: "/dashboard" },
+  { icon: Brain, label: "AI Trading", href: "/dashboard/ai-trading" },
   { icon: ArrowUpRight, label: "Deposit", href: "/dashboard/deposit" },
   { icon: ArrowDownLeft, label: "Withdraw", href: "/dashboard/withdraw" },
   { icon: PieChart, label: "Invest", href: "/dashboard/invest" },

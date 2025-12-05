@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, CheckCircle2 } from "lucide-react";
 
 const PAYOUTS = [
   { user: "Alex M.", amount: "$5,400", method: "Bitcoin", time: "2 mins ago" },
@@ -20,37 +20,35 @@ const TESTIMONIALS = [
   {
     name: "Jonathan Reeves",
     role: "Professional Trader",
-    content: "EliteCore has completely transformed my portfolio. The returns are consistent, and the withdrawal speed is unmatched in the industry.",
+    content: "The AI trading bot is a game changer. It executes trades faster than any human could, and the returns have been consistent.",
     avatar: "JR"
   },
   {
     name: "Elena Rodriguez",
     role: "Business Owner",
-    content: "I was skeptical at first, but the transparency and support team won me over. I've seen a 45% growth in just 3 months.",
+    content: "I set up the AI on 'Balanced' mode and forgot about it. Checked back a month later to see 15% growth. Incredible.",
     avatar: "ER"
   },
   {
     name: "Marcus Chen",
     role: "Crypto Enthusiast",
-    content: "The platform is incredibly intuitive. I love the real-time analytics and the security features give me total peace of mind.",
+    content: "Finally, a platform that delivers on its promises. The sharp execution and low latency are exactly what I needed.",
     avatar: "MC"
   }
 ];
 
 export function TrustIndicators() {
   return (
-    <section className="py-20 bg-rich-black overflow-hidden">
+    <section className="py-20 bg-rich-black overflow-hidden border-t border-white/10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Live Payouts - Vertical Marquee */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-              <span className="w-2 h-8 bg-emerald-accent rounded-full" />
+            <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3 uppercase tracking-wider">
+              <span className="w-2 h-8 bg-emerald-accent" />
               Live Withdrawals
             </h3>
-            <div className="relative h-[400px] overflow-hidden rounded-2xl bg-midnight-blue/30 border border-white/5 p-6">
-              {/* Gradient fades removed as per user request */}
-              
+            <div className="relative h-[400px] overflow-hidden bg-black border border-white/10 p-6">
               <motion.div
                 animate={{ y: ["0%", "-50%"] }}
                 transition={{
@@ -61,19 +59,19 @@ export function TrustIndicators() {
                 className="space-y-4"
               >
                 {[...PAYOUTS, ...PAYOUTS].map((payout, i) => (
-                  <div key={i} className="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                  <div key={i} className="flex items-center justify-between p-4 bg-white/5 border border-white/5 hover:border-emerald-accent transition-colors">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-emerald-accent/20 flex items-center justify-center text-emerald-accent font-bold text-xs">
+                      <div className="w-10 h-10 bg-emerald-accent/10 flex items-center justify-center text-emerald-accent font-bold text-xs border border-emerald-accent/20">
                         {payout.user.charAt(0)}
                       </div>
                       <div>
-                        <p className="text-white font-medium">{payout.user}</p>
-                        <p className="text-xs text-slate-500">{payout.time}</p>
+                        <p className="text-white font-bold">{payout.user}</p>
+                        <p className="text-xs text-slate-500 font-mono">{payout.time}</p>
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className="text-emerald-accent font-bold">{payout.amount}</p>
-                      <p className="text-xs text-slate-500">{payout.method}</p>
+                      <p className="text-emerald-accent font-bold font-mono">{payout.amount}</p>
+                      <p className="text-xs text-slate-500 uppercase">{payout.method}</p>
                     </div>
                   </div>
                 ))}
@@ -81,11 +79,11 @@ export function TrustIndicators() {
             </div>
           </div>
 
-          {/* Testimonials - Swipeable Stack (Simplified as Grid for now) */}
+          {/* Testimonials */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-              <span className="w-2 h-8 bg-metallic-gold rounded-full" />
-              Client Success Stories
+            <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3 uppercase tracking-wider">
+              <span className="w-2 h-8 bg-metallic-gold" />
+              Success Stories
             </h3>
             <div className="space-y-6">
               {TESTIMONIALS.map((testimonial, i) => (
@@ -96,25 +94,25 @@ export function TrustIndicators() {
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="bg-midnight-blue/40 border-white/5 hover:border-metallic-gold/20 transition-colors">
+                  <Card className="bg-black border-white/10 hover:border-metallic-gold transition-colors rounded-none">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
-                        <Avatar>
-                          <AvatarFallback className="bg-metallic-gold text-rich-black font-bold">
+                        <Avatar className="rounded-none">
+                          <AvatarFallback className="bg-metallic-gold text-rich-black font-bold rounded-none">
                             {testimonial.avatar}
                           </AvatarFallback>
                         </Avatar>
                         <div>
                           <div className="flex items-center gap-2 mb-2">
                             <h4 className="text-white font-bold">{testimonial.name}</h4>
-                            <span className="text-xs text-slate-500">• {testimonial.role}</span>
+                            <span className="text-xs text-slate-500 uppercase tracking-wider">• {testimonial.role}</span>
                           </div>
                           <div className="flex text-metallic-gold mb-3">
                             {[1, 2, 3, 4, 5].map((star) => (
                               <Star key={star} className="w-4 h-4 fill-current" />
                             ))}
                           </div>
-                          <p className="text-slate-400 text-sm leading-relaxed italic relative">
+                          <p className="text-slate-400 text-sm leading-relaxed italic relative font-light">
                             <Quote className="w-8 h-8 text-white/5 absolute -top-4 -left-4 -z-10" />
                             "{testimonial.content}"
                           </p>

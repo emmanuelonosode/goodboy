@@ -1,9 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, Zap, Headphones, Lock, Globe, Award } from "lucide-react";
+import { Shield, Zap, Headphones, Lock, Globe, Award, Brain, Cpu } from "lucide-react";
 
 const FEATURES = [
+  {
+    icon: Brain,
+    title: "AI Precision Trading",
+    description: "Our algorithms analyze millions of data points per second to execute profitable trades."
+  },
+  {
+    icon: Cpu,
+    title: "Automated Execution",
+    description: "Zero manual intervention needed. The system trades 24/7 on your behalf."
+  },
   {
     icon: Shield,
     title: "Bank-Grade Security",
@@ -13,16 +23,6 @@ const FEATURES = [
     icon: Zap,
     title: "Instant Withdrawals",
     description: "Access your profits instantly. No waiting periods, no hidden fees."
-  },
-  {
-    icon: Headphones,
-    title: "24/7 Expert Support",
-    description: "Our dedicated team is available round the clock to assist you with any queries."
-  },
-  {
-    icon: Lock,
-    title: "Fully Regulated",
-    description: "We operate under strict regulatory compliance to ensure your peace of mind."
   },
   {
     icon: Globe,
@@ -43,7 +43,7 @@ export function FeatureGrid() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose EliteCore?</h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            We combine cutting-edge technology with traditional financial wisdom to deliver superior results.
+            We combine cutting-edge AI technology with traditional financial wisdom.
           </p>
         </div>
 
@@ -52,9 +52,11 @@ export function FeatureGrid() {
             <motion.div
               key={index}
               whileHover={{ scale: 1.02, translateY: -5 }}
-              className="p-8 rounded-2xl bg-midnight-blue/40 border border-white/5 hover:border-metallic-gold/30 hover:bg-midnight-blue/60 transition-all group"
+              className="p-8 bg-black border border-white/10 hover:border-metallic-gold transition-all group relative overflow-hidden"
             >
-              <div className="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center mb-6 group-hover:bg-metallic-gold/10 transition-colors">
+              <div className="absolute top-0 left-0 w-1 h-full bg-metallic-gold opacity-0 group-hover:opacity-100 transition-opacity" />
+              
+              <div className="w-14 h-14 bg-white/5 flex items-center justify-center mb-6 group-hover:bg-metallic-gold/10 transition-colors rounded-none border border-white/5">
                 <feature.icon className="w-7 h-7 text-metallic-gold" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>

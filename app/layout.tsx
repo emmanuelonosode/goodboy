@@ -7,33 +7,33 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "EliteCore | High-Yield Investment Platform",
+    default: "EliteCore | AI Auto-Trading Platform - You Deposit, AI Trades",
     template: "%s | EliteCore",
   },
-  description: "Institutional-grade crypto trading and investment platform. Join thousands of investors earning passive income with our advanced AI arbitrage strategies.",
-  keywords: ["crypto investment", "high yield", "arbitrage trading", "passive income", "bitcoin", "ethereum"],
+  description: "Experience the power of automated AI trading. Simply add funds and let our advanced AI algorithms execute profitable trades for you 24/7. Passive income made simple.",
+  keywords: ["ai trading bot", "automated crypto trading", "auto trader", "passive income", "bitcoin investment", "ai arbitrage"],
   authors: [{ name: "EliteCore Team" }],
   creator: "EliteCore",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://elitecore.com",
-    title: "EliteCore | High-Yield Investment Platform",
-    description: "Institutional-grade crypto trading and investment platform.",
+    title: "EliteCore | AI Auto-Trading Platform",
+    description: "Simply add funds and let our AI trade for you. 24/7 automated profits.",
     siteName: "EliteCore",
     images: [
       {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "EliteCore Platform",
+        alt: "EliteCore AI Trading",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "EliteCore | High-Yield Investment Platform",
-    description: "Institutional-grade crypto trading and investment platform.",
+    title: "EliteCore | AI Auto-Trading Platform",
+    description: "Simply add funds and let our AI trade for you. 24/7 automated profits.",
     images: ["/opengraph-image.png"],
     creator: "@elitecore",
   },

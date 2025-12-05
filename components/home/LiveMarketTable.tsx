@@ -10,7 +10,8 @@ import {
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { LineChart, Line, ResponsiveContainer } from "recharts";
-import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const MARKET_DATA = [
   {
@@ -62,22 +63,22 @@ const MARKET_DATA = [
 
 export function LiveMarketTable() {
   return (
-    <section className="py-20 bg-midnight-blue/30">
+    <section className="py-20 bg-rich-black">
       <div className="container mx-auto px-4">
         <div className="mb-10 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Live Markets</h2>
           <p className="text-slate-400">Real-time pricing for top assets</p>
         </div>
 
-        <div className="bg-midnight-blue/40 backdrop-blur-md border border-white/5 rounded-xl overflow-hidden shadow-xl">
+        <div className="bg-black border border-white/10 overflow-hidden shadow-xl">
           <Table>
             <TableHeader className="bg-white/5">
-              <TableRow className="border-white/5 hover:bg-transparent">
-                <TableHead className="text-slate-400">Asset</TableHead>
-                <TableHead className="text-slate-400">Price</TableHead>
-                <TableHead className="text-slate-400">24h Change</TableHead>
-                <TableHead className="text-slate-400 hidden md:table-cell">Trend</TableHead>
-                <TableHead className="text-right text-slate-400">Action</TableHead>
+              <TableRow className="border-white/10 hover:bg-transparent">
+                <TableHead className="text-slate-400 font-bold uppercase tracking-wider">Asset</TableHead>
+                <TableHead className="text-slate-400 font-bold uppercase tracking-wider">Price</TableHead>
+                <TableHead className="text-slate-400 font-bold uppercase tracking-wider">24h Change</TableHead>
+                <TableHead className="text-slate-400 font-bold uppercase tracking-wider hidden md:table-cell">Trend</TableHead>
+                <TableHead className="text-right text-slate-400 font-bold uppercase tracking-wider">Action</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -85,17 +86,17 @@ export function LiveMarketTable() {
                 <TableRow key={asset.id} className="border-white/5 hover:bg-white/5 transition-colors group">
                   <TableCell className="font-medium text-white">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-xs font-bold">
+                      <div className="w-8 h-8 bg-white/10 flex items-center justify-center text-xs font-bold text-white">
                         {asset.symbol[0]}
                       </div>
                       <div>
-                        <span className="block">{asset.name}</span>
+                        <span className="block font-bold">{asset.name}</span>
                         <span className="text-xs text-slate-500 md:hidden">{asset.symbol}</span>
                       </div>
                     </div>
                   </TableCell>
-                  <TableCell className="text-white">{asset.price}</TableCell>
-                  <TableCell className={asset.change.startsWith("+") ? "text-emerald-accent" : "text-red-500"}>
+                  <TableCell className="text-white font-mono">{asset.price}</TableCell>
+                  <TableCell className={asset.change.startsWith("+") ? "text-emerald-accent font-mono" : "text-red-500 font-mono"}>
                     {asset.change}
                   </TableCell>
                   <TableCell className="hidden md:table-cell w-[150px]">
@@ -103,7 +104,7 @@ export function LiveMarketTable() {
                       <ResponsiveContainer width="100%" height="100%">
                         <LineChart data={asset.data}>
                           <Line 
-                            type="monotone" 
+                            type="step" 
                             dataKey="v" 
                             stroke={asset.color} 
                             strokeWidth={2} 
@@ -114,9 +115,11 @@ export function LiveMarketTable() {
                     </div>
                   </TableCell>
                   <TableCell className="text-right">
-                    <Button size="sm" className="bg-transparent border border-metallic-gold text-metallic-gold hover:bg-metallic-gold hover:text-rich-black transition-all opacity-0 group-hover:opacity-100">
-                      Trade
-                    </Button>
+                    <Link href="/dashboard/ai-trading">
+                        <Button size="sm" className="bg-transparent border border-metallic-gold text-metallic-gold hover:bg-metallic-gold hover:text-rich-black transition-all opacity-0 group-hover:opacity-100 rounded-none">
+                        AI Trade <ArrowRight className="ml-1 w-3 h-3" />
+                        </Button>
+                    </Link>
                   </TableCell>
                 </TableRow>
               ))}

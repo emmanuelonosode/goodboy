@@ -29,72 +29,72 @@
   --radius-xl: calc(var(--radius) + 4px);
   
   /* Custom Colors - Mapped to New Theme */
-  --color-rich-black: #0f0c29; /* Deep Violet Background */
-  --color-midnight-blue: #1e1b4b; /* Deep Indigo */
-  --color-metallic-gold: #d946ef; /* Neon Purple (Primary) */
-  --color-emerald-accent: #06b6d4; /* Neon Cyan (Accent) */
+  --color-rich-black: #020205; /* Deep Black/Blue Base */
+  --color-midnight-blue: #0f0c29; /* Deep Violet */
+  --color-metallic-gold: #7c3aed; /* Neon Purple (Primary) - Replaces Gold */
+  --color-emerald-accent: #06b6d4; /* Neon Cyan (Accent) - Replaces Emerald */
   
-  /* New Semantic Names (to be migrated to) */
-  --color-deep-violet: #0f0c29;
-  --color-neon-purple: #d946ef;
+  /* New Semantic Names */
+  --color-deep-space: #020205;
+  --color-neon-purple: #7c3aed;
   --color-neon-cyan: #06b6d4;
-  --color-hot-pink: #f472b6;
+  --color-neon-blue: #2563eb;
 }
 
 :root {
-  /* Neon Cyberpunk Theme */
-  --background: #0f0c29; /* Deep Violet */
+  /* Neon Cyberpunk / Deep Space Theme */
+  --background: #020205; /* Deep Black/Blue */
   --foreground: #e2e8f0; /* Slate-200 */
   
-  --card: #1e1b4b; /* Deep Indigo */
+  --card: #0f0c29; /* Deep Violet */
   --card-foreground: #ffffff;
   
-  --popover: #1e1b4b;
+  --popover: #0f0c29;
   --popover-foreground: #ffffff;
   
-  --primary: #d946ef; /* Neon Purple */
+  --primary: #7c3aed; /* Neon Purple */
   --primary-foreground: #ffffff;
   
-  --secondary: #06b6d4; /* Neon Cyan */
-  --secondary-foreground: #0f0c29;
+  --secondary: #2563eb; /* Neon Blue */
+  --secondary-foreground: #ffffff;
   
-  --muted: #312e81;
+  --muted: #1e1b4b;
   --muted-foreground: #94a3b8;
   
-  --accent: #f472b6; /* Hot Pink */
-  --accent-foreground: #0f0c29;
+  --accent: #06b6d4; /* Neon Cyan */
+  --accent-foreground: #000000;
   
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
   
-  --border: rgba(217, 70, 239, 0.2); /* Purple tint */
-  --input: rgba(217, 70, 239, 0.1);
-  --ring: #d946ef;
+  --border: rgba(124, 58, 237, 0.2); /* Purple tint */
+  --input: rgba(124, 58, 237, 0.1);
+  --ring: #7c3aed;
   
   --radius: 0.5rem;
 }
 
 .dark {
   /* Same as root since we are dark-first */
-  --background: #0f0c29;
+  --background: #020205;
   --foreground: #e2e8f0;
-  --card: #1e1b4b;
+  --card: #0f0c29;
   --card-foreground: #ffffff;
-  --popover: #1e1b4b;
+  --popover: #0f0c29;
   --popover-foreground: #ffffff;
-  --primary: #d946ef;
+  --primary: #7c3aed;
   --primary-foreground: #ffffff;
-  --secondary: #06b6d4;
-  --secondary-foreground: #0f0c29;
-  --muted: #312e81;
+  --secondary: #2563eb;
+  --secondary-foreground: #ffffff;
+  --muted: #1e1b4b;
   --muted-foreground: #94a3b8;
-  --accent: #f472b6;
-  --accent-foreground: #0f0c29;
+  --accent: #06b6d4;
+  --accent-foreground: #000000;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: rgba(217, 70, 239, 0.2);
-  --input: rgba(217, 70, 239, 0.1);
-  --ring: #d946ef;
+  --border: rgba(124, 58, 237, 0.2);
+  --input: rgba(124, 58, 237, 0.1);
+  --ring: #7c3aed;
 }
 
 @layer base {
@@ -108,10 +108,10 @@
 
 @layer utilities {
   .glass {
-    @apply bg-deep-violet/60 backdrop-blur-md border border-neon-purple/20;
+    @apply bg-midnight-blue/60 backdrop-blur-md border border-neon-purple/20;
   }
   .glass-card {
-    @apply bg-deep-violet/40 backdrop-blur-md border border-neon-purple/10 shadow-[0_0_15px_rgba(217,70,239,0.1)];
+    @apply bg-midnight-blue/40 backdrop-blur-md border border-neon-purple/10 shadow-[0_0_15px_rgba(124,58,237,0.1)];
   }
   .text-gradient {
     @apply text-neon-purple;
