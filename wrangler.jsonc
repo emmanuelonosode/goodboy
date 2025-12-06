@@ -3,6 +3,8 @@
   "main": ".open-next/worker.js",
   "name": "goodboys",
   "compatibility_date": "2025-03-25",
+    "routes": ["https://trade.shoveltools.online/*"],
+
 
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": {
