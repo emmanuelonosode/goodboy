@@ -7,16 +7,16 @@ export default function StrategyPage() {
   return (
     <div className="min-h-screen text-white selection:bg-metallic-gold/30">
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-12 md:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-[url(/grid.svg)] bg-center opacity-20" />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
             <div className="max-w-2xl text-center md:text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-metallic-gold/10 border border-metallic-gold/20 text-metallic-gold text-sm font-medium mb-6">
                 <Activity className="w-4 h-4" />
                 <span>Live Market Analysis Active</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
                 Quantum AI <span className="text-metallic-gold">Arbitrage</span>
               </h1>
               <p className="text-xl text-gray-400 leading-relaxed mb-8">
@@ -108,7 +108,7 @@ export default function StrategyPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-24">
+      <section className="py-12 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">The Core Engine</h2>
