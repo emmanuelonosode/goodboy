@@ -2,40 +2,34 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "EliteCore | AI Auto-Trading Platform - You Deposit, AI Trades",
-    template: "%s | EliteCore",
+    default: "Apex Vault AI Trading | Your Gateway to Automated Wealth",
+    template: "%s | Apex Vault AI Trading",
   },
-  description: "Experience the power of automated AI trading. Simply add funds and let our advanced AI algorithms execute profitable trades for you 24/7. Passive income made simple.",
-  keywords: ["ai trading bot", "automated crypto trading", "auto trader", "passive income", "bitcoin investment", "ai arbitrage"],
-  authors: [{ name: "EliteCore Team" }],
-  creator: "EliteCore",
+  description: "Experience the pinnacle regarding automated AI trading. Apex Vault AI Trading leverages institutional-grade algorithms to execute profitable trades 24/7. Your wealth, automated.",
+  keywords: ["apex vault", "ai trading", "automated crypto trading", "wealth management", "passive income", "bitcoin investment", "ai arbitrage", "institutional trading"],
+  authors: [{ name: "Apex Vault Team" }],
+  creator: "Apex Vault AI Trading",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://elitecore.com",
-    title: "EliteCore | AI Auto-Trading Platform",
-    description: "Simply add funds and let our AI trade for you. 24/7 automated profits.",
-    siteName: "EliteCore",
-    images: [
-      {
-        url: "/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "EliteCore AI Trading",
-      },
-    ],
+    url: "https://apexvault.com",
+    title: "Apex Vault AI Trading | Institutional-Grade Automation",
+    description: "Secure, transparent, and profitable. Let Apex Vault's AI manage your portfolio with precision.",
+    siteName: "Apex Vault AI Trading",
+
   },
   twitter: {
     card: "summary_large_image",
-    title: "EliteCore | AI Auto-Trading Platform",
-    description: "Simply add funds and let our AI trade for you. 24/7 automated profits.",
-    images: ["/opengraph-image.png"],
-    creator: "@elitecore",
+    title: "Apex Vault AI Trading",
+    description: "Institutional-grade AI trading for everyone. Automate your wealth generation.",
+
+    creator: "@apexvault",
   },
   metadataBase: new URL("https://elitecore.com"),
 };
@@ -50,6 +44,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-background text-foreground antialiased selection:bg-metallic-gold/30 selection:text-white relative`}>
         {/* Waves Background Pattern */}
         <div className="fixed inset-0 opacity-30 pointer-events-none" style={{ backgroundImage: 'url(/waves.svg)', backgroundSize: 'cover', backgroundPosition: 'center bottom', backgroundRepeat: 'no-repeat' }} />
+        <JsonLd />
         {children}
         <Toaster position="top-center" richColors />
       </body>

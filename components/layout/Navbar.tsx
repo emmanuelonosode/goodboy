@@ -28,10 +28,10 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <div className="w-10 h-10 rounded-xl bg-metallic-gold flex items-center justify-center text-rich-black font-bold text-xl shadow-lg shadow-metallic-gold/20 group-hover:scale-105 transition-transform">
-            E
+            A
           </div>
           <span className="text-2xl font-bold text-white tracking-tight">
-            Elite<span className="text-metallic-gold">Core</span>
+            Apex <span className="text-metallic-gold">Vault</span>
           </span>
         </Link>
 

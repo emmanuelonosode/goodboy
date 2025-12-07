@@ -12,10 +12,10 @@ export function Footer() {
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg bg-metallic-gold flex items-center justify-center text-rich-black font-bold shadow-lg shadow-metallic-gold/20">
-                E
+                A
               </div>
               <span className="text-xl font-bold text-white">
-                Elite<span className="text-metallic-gold">Core</span>
+                Apex <span className="text-metallic-gold">Vault</span>
               </span>
             </Link>
             <p className="text-slate-400 leading-relaxed">
@@ -100,7 +100,7 @@ export function Footer() {
 
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-sm">
-            © 2024 EliteCore Investments. All rights reserved.
+            © 2025 Apex Vault AI Trading. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-slate-500">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>

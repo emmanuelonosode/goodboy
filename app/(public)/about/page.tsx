@@ -34,7 +34,7 @@ export default function AboutPage() {
               </span>
             </h1>
             <p className="mx-auto max-w-2xl text-xl text-gray-400 leading-relaxed mb-10">
-              EliteCore isn't just a trading platform. We are a technology powerhouse fusing 
+              Apex Vault AI Trading isn't just a trading platform. We are a technology powerhouse fusing 
               <span className="text-white font-semibold"> institutional-grade AI </span> 
               with deep liquidity markets to generate consistent, passive returns for our partners.
             </p>
@@ -163,7 +163,7 @@ export default function AboutPage() {
       <section className="py-24 bg-[#0A0A0A]">
         <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-                <h2 className="text-3xl font-bold text-white mb-4">The Elite Standard</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">The Apex Standard</h2>
                 <p className="text-gray-400 max-w-2xl mx-auto">
                     Built by Wall Street veterans for the modern digital investor.
                 </p>
@@ -196,7 +196,7 @@ export default function AboutPage() {
                 Ready to trade at the <span className="text-metallic-gold">Institutional Level?</span>
             </h2>
             <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-                Join 50,000+ investors who have switched to EliteCore for superior returns and peace of mind.
+                Join 50,000+ investors who have switched to Apex Vault for superior returns and peace of mind.
             </p>
             <Link href="/signup">
                 <Button size="lg" className="bg-metallic-gold hover:bg-yellow-500 text-black font-bold h-16 px-12 rounded-full text-lg shadow-2xl shadow-metallic-gold/20 transform hover:-translate-y-1 transition-transform">
